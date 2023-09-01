@@ -19,33 +19,15 @@ h2 {
 .btns {
     padding: 2rem;
 }
-.btn-decrease {
+
+.btn {
     padding: 0.5rem;
     font-size: 20px;
     border-radius: 0.5rem;
     width: 100px;
 }
-.btn-reset {
-    padding: 0.5rem;
-    font-size: 20px;
-    border-radius: 0.5rem;
-    width: 100px;
-}
-.btn-increase {
-    padding: 0.5rem;
-    font-size: 20px;
-    border-radius: 0.5rem;
-    width: 100px;
-}
-.btn-increase:hover {
-    background: lightblue;
-    cursor: pointer;
-}
-.btn-reset:hover {
-    background: lightblue;
-    cursor: pointer;
-}
-.btn-decrease:hover {
+
+.btn:hover {
     background: lightblue;
     cursor: pointer;
 }
