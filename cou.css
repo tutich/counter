@@ -1,0 +1,51 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background: whitesmoke;
+}
+main {
+    text-align: center;
+    margin: 20rem;
+   
+}
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+#value {
+    font-weight: bold;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+.btns {
+    padding: 2rem;
+}
+.btn-decrease {
+    padding: 0.5rem;
+    font-size: 20px;
+    border-radius: 0.5rem;
+    width: 100px;
+}
+.btn-reset {
+    padding: 0.5rem;
+    font-size: 20px;
+    border-radius: 0.5rem;
+    width: 100px;
+}
+.btn-increase {
+    padding: 0.5rem;
+    font-size: 20px;
+    border-radius: 0.5rem;
+    width: 100px;
+}
+.btn-increase:hover {
+    background: lightblue;
+    cursor: pointer;
+}
+.btn-reset:hover {
+    background: lightblue;
+    cursor: pointer;
+}
+.btn-decrease:hover {
+    background: lightblue;
+    cursor: pointer;
+}
