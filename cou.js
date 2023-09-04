@@ -26,3 +26,28 @@
 // value.textContent = count;
 //     });
 // });
+
+const reviews = [
+    {
+        Id: 1,
+        name: "Rose chep",
+        job: "Web Developer",
+        img: "https://hips.hearstapps.com/hmg-prod/images/gettyimages-964894534-1600088334.jpg",
+        text: "Would recommend anyone to get their glasses here.Top quality!",
+    },
+    {
+        id: 2,
+        name: 
+        job: "UX designer",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiMxCKZNYHwoxLVwDZYyy2iRGLjfvuXHO-PA&usqp=CAU",
+        text: "Since i got this glasses my coding life has improved significantly due to reduced stress on my eyes",
+    }
+];
+const img = document.getElementById("img");
+ const name = document.getElementById("name");
+ const job = document.getElementById("job");
+ const desc = document.getElementById("description");
+
+ const prev = document.querySelector(".prev")
+ const next = document.querySelector(".next")
+ const random = document.querySelector(".random")
