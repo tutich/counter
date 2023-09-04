@@ -37,9 +37,9 @@ const reviews = [
     },
     {
         id: 2,
-        name: 
-        job: "UX designer",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiMxCKZNYHwoxLVwDZYyy2iRGLjfvuXHO-PA&usqp=CAU",
+        name: "josh Werner",
+        job:  "Ux Designer",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeIOfjYdgqb2559aXQSwMOfEfQoCePwANbKw&usqp=CAU",
         text: "Since i got this glasses my coding life has improved significantly due to reduced stress on my eyes",
     }
 ];
@@ -48,6 +48,32 @@ const img = document.getElementById("img");
  const job = document.getElementById("job");
  const desc = document.getElementById("description");
 
- const prev = document.querySelector(".prev")
- const next = document.querySelector(".next")
- const random = document.querySelector(".random")
+ const prev = document.querySelector(".prev");
+ const next = document.querySelector(".next");
+ const random = document.querySelector(".random");
+
+ let currentItem = 0;
+
+ window.addEventListener('DOMContentLoaded', function() {
+    showPerson(currentItem);
+ })
+
+ function showPerson(person) {
+    const item = reviews[currentItem];
+    img.src = item.img;
+    name.textContent = item.name;
+    job.textContent = item.job;
+    description.textContent = item.description;
+ }
+
+ next.addEventListener("click", function() {
+    currentItem++;
+    showPerson(currentItem);
+    if(currentItem > reviews.length - 1) {
+        currentItem = 0;
+    }
+ })
+ prev.addEventListener("click", function() {
+    currentItem--;
+    showPerson(currentItem);
+ })
