@@ -44,7 +44,7 @@ const reviews = [
     }
 ];
 const img = document.getElementById("img");
- const name = document.getElementById("name");
+ const author = document.getElementById("author");
  const job = document.getElementById("job");
  const desc = document.getElementById("description");
 
@@ -61,19 +61,28 @@ const img = document.getElementById("img");
  function showPerson(person) {
     const item = reviews[currentItem];
     img.src = item.img;
-    name.textContent = item.name;
+    author.textContent = item.author;
     job.textContent = item.job;
     description.textContent = item.description;
  }
 
  next.addEventListener("click", function() {
     currentItem++;
-    showPerson(currentItem);
+   
     if(currentItem > reviews.length - 1) {
         currentItem = 0;
     }
+    showPerson(currentItem);
  })
  prev.addEventListener("click", function() {
     currentItem--;
+    if(currentItem = 0) {
+        currentItem < reviews.length - 1;
+        
+    }
     showPerson(currentItem);
+ })
+ random.addEventListener("click", function() {
+    currentItem = Math.floor(Math.random() * reviews.length);
+    showPerson();
  })
