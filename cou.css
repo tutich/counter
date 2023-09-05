@@ -146,7 +146,7 @@ h2 {
       padding: 0;
     }
     .nav-toggle {
-      display: none;
+      display: flex;
     }
     .links {
       height: auto;
