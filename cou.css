@@ -89,6 +89,13 @@ h2 {
     background: #F1F5F9;
     box-shadow: #F1F5F7;
   }
+  .navbar {
+min-height: 70px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 24px;
+  }
   .nav-header {
     display: flex;
     align-items: center;
@@ -96,11 +103,7 @@ h2 {
     padding: 1rem;
   }
  
-  .nav-toggle:hover {
-    color: var(--clr-primary-1);
-    transform: rotate(90deg);
-  }
-  .logo {
+    .logo {
     height: 40px;
   }
   .links a {
@@ -128,12 +131,29 @@ h2 {
   .links {
     height: 0;
     overflow: hidden;
-    transition: var(--transition);
+    transition: 0.8s ease;
+    gap: 40px;
   }
   .show-links {
     height: 10rem;
   }
-  @media screen and (min-width: 800px) {
+
+  .coding {
+display: none;
+cursor: pointer;
+  }
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: black;
+  }
+
+
+  @media(min-width: 768px) {
     .nav-center {
       max-width: 1170px;
       margin: 0 auto;
@@ -151,6 +171,22 @@ h2 {
     .links {
       height: auto;
       display: flex;
+      transition: 0.8s ease;
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background: #F1F5F9;
+      width: 100%;
+      text-align: left;
+      transition: 0.5s;
+    }
+    .nav-item {
+      margin: 16px 0;
+    }
+    .links.active {
+      left: 0;
     }
     .links a {
       padding: 0;
@@ -160,5 +196,17 @@ h2 {
       padding: 0;
       background: transparent;
     }
-    
+    .coding {
+      display: block;
+
+    }
+    .coding.active .bar:nth-child(2){
+      opacity: 0;
+    }
+    .coding.active .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+    }
+    .coding.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+    }
   }
