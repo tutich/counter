@@ -96,3 +96,8 @@ coding.addEventListener("click", function() {
     coding.classList.toggle("active");
     links.classList.toggle("active");
 });
+
+document.querySelector(".nav-link").forEach(n => n.addEventListener("click", function() {
+    coding.classList.remove('active');
+    links.classList.remove('active');
+}))
